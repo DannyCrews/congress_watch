@@ -1,8 +1,8 @@
 class LegislatorsController < ApplicationController
   def index
     @user = User.first
-    @zipcode = params[:zipcode]
-    @legislators = Congress.legislators_locate('01879')
+    @zipcode = params[:zipcode] || "02134"
+    @legislators = Congress.legislators_locate(@zipcode)
   end
 
   def create
