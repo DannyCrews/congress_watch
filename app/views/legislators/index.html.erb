@@ -1,0 +1,10 @@
+<h1>Legislators in <%= @zipcode %></h1>
+<% @legislators['results'].each do |legislator| %>
+
+<% legislator.each do |key, value| %> 
+<p><%= "#{key.to_s} #{value.to_s}" %></p> 
+<% end %> 
+
+
+
+<% end %>
