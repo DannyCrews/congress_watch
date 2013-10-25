@@ -1,0 +1,7 @@
+<% if user_signed_in? %>
+<%= link_to 'Be Out,yo', destroy_user_session_path, method: 'delete' %>
+<p> logged in as <%= current_user.email %> </p>
+<% else %>
+<%= link_to 'Sign_up', new_user_registration_path %>
+<%= link_to 'Log In', new_user_session_path %>
+<% end %>
