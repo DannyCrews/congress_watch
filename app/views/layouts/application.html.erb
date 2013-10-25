@@ -1,18 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CongressWatch</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<title>CongressWatch</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 
+	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	<%= csrf_meta_tags %>
 
-<%= render 'layouts/navbar' %>
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+      <![endif]-->
+    </head>
+    <body>
+    	<div class = "container">
+    		<header class ="navbar navbar-fixed-top">
+    			<nav class ="navbar-inner"> 
+    				<div class ="container"> 
+    				<%= render 'layouts/navbar' %> 
+    				</div>
+    			</nav> 
+    		</header> 
+    	<main role ="main"> 
+    		<div class ="container"> 
+    			<div class ="content"> 
+    				<div class ="row"> 
+    					<div class ="span12">
+    					<%= yield %> 
+    					</div> 
+    				</div> 
+    					<footer>
+    					</footer> 
+    				</div> 
+    			</div> 
+    	</main>
+    	</div>
 
+    	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    	<script src="//code.jquery.com/jquery.js"></script>
+    	<!-- Include all compiled plugins (below), or include individual files as needed -->
+    	<script src="js/bootstrap.min.js"></script>
 
-<%= yield %>
+    </body>
+    </html>
 
-</body>
 
