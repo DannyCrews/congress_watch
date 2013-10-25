@@ -1,1 +1,31 @@
 Welcome
+
+
+<% @floor_updates['results'].each do |floor_update| %>
+<% floor_update.each do |key, value| %> 
+<p><%= "#{key.to_s} #{value.to_s}" %></p> 
+<% end %> 
+<% end %>
+<br/>
+<br/>
+
+
+<% @bills['results'].each do |bill| %>
+<% bill.each do |key, value| %> 
+<p><%= "#{key.to_s} #{value.to_s}" %></p> 
+<% end %> 
+<% end %>
+<br/>
+<br/>
+
+<% @committees['results'].each do |committee| %>
+<% committee.each do |key, value| %> 
+<p><%= "#{key.to_s} #{value.to_s}" %></p> 
+<% end %> 
+<% end %>
+<br/>
+<br/>
+
+<p><%= @floor_updates %></p>
+<p><%= @bills %></p>
+<p><%= @committees %>

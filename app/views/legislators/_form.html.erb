@@ -1,11 +1,4 @@
 
-<%#= form_tag({controller: "legislators", action: "new"}, method: "get", class: "nifty_form") %>
-
-
-
-
-
-
 <%= form_tag("/legislators/", method: "get") do %>
 <%= label_tag(:zip, "Enter Your Zip Code:") %>
 <%= text_field_tag(:zip) %>

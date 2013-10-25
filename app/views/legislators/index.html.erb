@@ -1,10 +1,28 @@
 <h1>Legislators in <%= @zipcode %></h1>
 <% @legislators['results'].each do |legislator| %>
 
-<% legislator.each do |key, value| %> 
-<p><%= "#{key.to_s} #{value.to_s}" %></p> 
-<% end %> 
+<p><%= "#{legislator[:title]} #{legislator[:first_name]} #{legislator[:last_name]}" %></p>
+<p><%= "State: #{legislator[:state]}" %></p>
+<p><%= "Chamber: #{legislator[:chamber]}" %></p>
+<p><%= "Term Start: #{legislator[:term_start]}" %></p>
+<p><%= "Term End: #{legislator[:term_end]}" %></p>
+<p><%= "Party: #{legislator[:party]}" %></p>
+<p><%= "Website: #{legislator[:website]}" %></p>
+<p><%= "Contact Form: #{legislator[:contact_form]}" %></p>
+<p><%= "Twitter: @#{legislator[:twitter_id]}" %></p>
+<p><%= "Facebook ID: #{legislator[:facebook_id]}" %></p>
+<p><%= "Phone: #{legislator[:phone]}" %></p>
+<p><%= "Fax: #{legislator[:fax]}" %></p>
+<p><%= "Birthday: #{legislator[:birthday]}" %></p>
 
+
+
+
+<%# legislator.each do |key, value| %> 
+<p><%#= "#{key.to_s} #{value.to_s}" %></p> 
+<%# end %> 
+<br/>
+<br/>
 
 
 <% end %>

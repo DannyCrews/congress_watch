@@ -1,6 +1,6 @@
 class LegislatorsController < ApplicationController
   def index
-    @zipcode = params[:id] || "02134"
+    @zipcode = params[:zip] || "02134"
     @legislators = Congress.legislators_locate(@zipcode)
   end
 
