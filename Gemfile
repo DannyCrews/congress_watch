@@ -10,6 +10,9 @@ gem 'pg'
 # For Heroku being happy and not complaining. Doesn't do much right now
 gem 'rails_12factor'
 
+gem 'anjlab-bootstrap-rails', '~> 3.0.0.3', :require => 'bootstrap-rails'
+
+
 gem 'congress'
 
 gem 'json'
