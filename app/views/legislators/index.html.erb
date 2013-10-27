@@ -1,19 +1,24 @@
 <h1>Legislators in <%= @zipcode %></h1>
-<% @legislators['results'].each do |legislator| %>
 
-<p><%= "#{legislator[:title]} #{legislator[:first_name]} #{legislator[:last_name]}" %></p>
-<p><%= "State: #{legislator[:state]}" %></p>
-<p><%= "Chamber: #{legislator[:chamber]}" %></p>
-<p><%= "Term Start: #{legislator[:term_start]}" %></p>
-<p><%= "Term End: #{legislator[:term_end]}" %></p>
-<p><%= "Party: #{legislator[:party]}" %></p>
-<p><%= "Website: #{legislator[:website]}" %></p>
-<p><%= "Contact Form: #{legislator[:contact_form]}" %></p>
-<p><%= "Twitter: @#{legislator[:twitter_id]}" %></p>
-<p><%= "Facebook ID: #{legislator[:facebook_id]}" %></p>
-<p><%= "Phone: #{legislator[:phone]}" %></p>
-<p><%= "Fax: #{legislator[:fax]}" %></p>
-<p><%= "Birthday: #{legislator[:birthday]}" %></p>
+<% @legislators['results'].each do |legislator| %>
+<% image = legislator[:bioguide_id].to_s %>
+<% @twitter = legislator[:twitter_id].to_s %>
+<%= image_tag "#{image}.jpg" %>
+
+
+<h2><p><%= "#{legislator[:title]} #{legislator[:first_name]} #{legislator[:last_name]}" %></p></h2>
+<p><span class = "bold"><%= "State: "%></span><%="#{legislator[:state]}" %></p>
+<p><span class = "bold"><%= "Chamber: "%></span><%="#{legislator[:chamber]}" %></p>
+<p><span class = "bold"><%= "Term Start: "%></span><%="#{legislator[:term_start]}" %></p>
+<p><span class = "bold"><%= "Term End: "%></span><%="#{legislator[:term_end]}" %></p>
+<p><span class = "bold"><%= "Party: "%></span><%="#{legislator[:party]}" %></p>
+<p><span class = "bold"><%= "Website: "%></span><%= link_to "#{legislator[:website]}", legislator[:website] %></p>
+<p><span class = "bold"><%= "Contact Form: "%></span><%= link_to "#{legislator[:contact_form]}", legislator[:contact_form] %></p>
+<p><span class = "bold"><%= "Facebook_ID: " %></span><%= link_to "http://facebook.com/#{legislator[:facebook_id]}", "http://facebook.com/legislator[:facebook_id]" %></p>
+<p><span class = "bold"><%= "Twitter: " %></span><%= link_to "http://twitter.com/#{legislator[:twitter_id]}", "http://twitter.com/legislator[:twitter_id]" %></p>
+<p><span class = "bold"><%= "Phone: "%></span><%="#{legislator[:phone]}" %></p>
+<p><span class = "bold"><%= "Fax: "%></span><%="#{legislator[:fax]}" %></p>
+<p><span class = "bold"><%= "Birthday: "%></span><%="#{legislator[:birthday]}" %></p>
 
 
 

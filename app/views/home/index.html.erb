@@ -1,31 +1,32 @@
-Welcome
+		<div class="row">
+			<div class="col-md-4">
+				<%= image_tag "2011_State_of_the_Union.jpg", :size => "380x285", :responsive => true %>
+				<h3 class="text-center">Floor Updates</h3>
+				<div style="overflow-y:scroll; height:400px;">
+					<% @floor_updates['results'].each do |floor_update| %>
+					<p><%= floor_update[:timestamp] %>: <%= floor_update[:update] %></p>
+					<% end %>
+				</div>
+			</div>
 
+			<div class="col-md-4">
+				<%= image_tag "Civilrightsact1964.jpg", :size => "380x285", :responsive => true %>
 
-<% @floor_updates['results'].each do |floor_update| %>
-<% floor_update.each do |key, value| %> 
-<p><%= "#{key.to_s} #{value.to_s}" %></p> 
-<% end %> 
-<% end %>
-<br/>
-<br/>
+				<h3 class="text-center">Bills</h3>
+				<div style="overflow-y:scroll; height:400px;">
+					<% @bills['results'].each do |bill| %>
+					<p><%= bill[:bill_id] %>: <%= bill[:sponsor_id] %> <%= bill[:official_title] %></p>
+					<% end %>
+				</div>
+			</div>
 
-
-<% @bills['results'].each do |bill| %>
-<% bill.each do |key, value| %> 
-<p><%= "#{key.to_s} #{value.to_s}" %></p> 
-<% end %> 
-<% end %>
-<br/>
-<br/>
-
-<% @committees['results'].each do |committee| %>
-<% committee.each do |key, value| %> 
-<p><%= "#{key.to_s} #{value.to_s}" %></p> 
-<% end %> 
-<% end %>
-<br/>
-<br/>
-
-<p><%= @floor_updates %></p>
-<p><%= @bills %></p>
-<p><%= @committees %>
+			<div class="col-md-4">
+				<%= image_tag "Congress_Hall_committee_room_2.jpg", :size => "380x285", :responsive => true %>
+				<h3 class="text-center">Active Committees</h3>
+				<div style="overflow-y:scroll; height:400px;">
+					<% @committees['results'].each do |committee| %>
+					<p><%= committee[:chamber] %>: <%= committee[:committee_id] %> <%= committee[:name] %></p>
+					<% end %>
+				</div>
+			</div>
+		</div>
