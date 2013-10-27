@@ -157,6 +157,7 @@ DEPENDENCIES
   congress
   devise
   dotenv-rails
+  hashie
   jbuilder (~> 1.2)
   jquery-rails
   json
@@ -164,6 +165,7 @@ DEPENDENCIES
   pry-rails
   rails (= 4.0.0)
   rails_12factor
+  rash
   sass-rails (~> 4.0.0)
   sdoc
   turbolinks

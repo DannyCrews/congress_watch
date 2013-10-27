@@ -8,44 +8,78 @@
 
 	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
 	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-	<%= csrf_meta_tags %>
+	<%#= stylesheet_link_tag    "legislator", media: "all", "data-turbolinks-track" => true %>
+    <%#= javascript_include_tag "legislator", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
 
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="../../assets/js/html5shiv.js"></script>
       <script src="../../assets/js/respond.min.js"></script>
       <![endif]-->
-    </head>
-    <body>
-    	<div class = "container">
-    		<header class ="navbar navbar-fixed-top">
-    			<nav class ="navbar-inner"> 
-    				<div class ="container"> 
-    				<%= render 'layouts/navbar' %> 
-    				</div>
-    			</nav> 
-    		</header> 
-    	<main role ="main"> 
-    		<div class ="container"> 
-    			<div class ="content"> 
-    				<div class ="row"> 
-    					<div class ="span12">
-    					<%= yield %> 
-    					</div> 
-    				</div> 
-    					<footer>
-    					</footer> 
-    				</div> 
-    			</div> 
-    	</main>
-    	</div>
+  </head>
+  <body>
+    <nav class="navbar-wrapper navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Congress Watch</a>
+          </div>
+ 
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="/"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-star"></span> Top Destinations</a></li>
+            </ul>
+              <%= render 'layouts/navbar' %>
 
-    	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    	<script src="//code.jquery.com/jquery.js"></script>
-    	<!-- Include all compiled plugins (below), or include individual files as needed -->
-    	<script src="js/bootstrap.min.js"></script>
+          </div><!-- /.navbar-collapse -->
+        </div>
+        </nav>
+        
+        
+        
+<header>
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <h1>Congress Watch</h1>
+            <p>powered by the Sunlight Foundation API</p>
+        </div>
+    </div>
+</header>
+<div class="container">
 
-    </body>
-    </html>
+    <%= yield %> 
+</div> 
+<footer>
+    <div class="container">
+        <div class="row">
+        <div class="col-md-4">&copy; 2013 Daniel Crews</div>
+          <div class="col-md-4">
+            <ul class="nav nav-pills">
+              <li><a href="http://sunlightfoundation.com/">Sunlight Foundation</a></li>
+              <li><a href="https://generalassemb.ly/">General Assembly</a></li>
+          </ul>
+      </div>
+</div>
+</div>
+</footer>  
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="//code.jquery.com/jquery.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
 
 

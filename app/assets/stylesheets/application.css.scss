@@ -14,10 +14,34 @@
 
  @import "twitter/bootstrap";
 
- .content { background-color: #eee;
- 	padding: 20px;
- 	margin: 0 -20px;
- 	-webkit-border-radius: 0 0 6px 6px;
- 	-moz-border-radius: 0 0 6px 6px;
- 	border-radius: 0 0 6px 6px;
- 	-webkit-box-shadow: 0 1px 2px rgba( 0,0,0,.15); }
+ .jumbotron{
+    background-color:#1253a4;
+    color:white;
+}
+.navbar-wrapper {
+  background-color: #CC0000; /* fallback color, place your own */
+
+}
+
+/* title */
+.navbar-default .navbar-brand {
+    color: white;
+}
+/* link */
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #333;
+}
+
+
+ // .content { background-color: #eee;
+ // 	padding: 20px;
+ // 	margin: 0 -20px;
+ // 	margin-top: 50px
+ // 	-webkit-border-radius: 0 0 6px 6px;
+ // 	-moz-border-radius: 0 0 6px 6px;
+ // 	border-radius: 0 0 6px 6px;
+ // 	-webkit-box-shadow: 0 1px 2px rgba( 0,0,0,.15); }
