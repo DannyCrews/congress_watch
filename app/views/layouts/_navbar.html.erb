@@ -1,12 +1,14 @@
 <% if user_signed_in? %>
-<%= link_to 'Log Out', destroy_user_session_path, method: 'delete' %>
-<p> logged in as <%= current_user.email %> </p>
-<%= form_tag("/legislators/", method: "get") do %>
-<%= label_tag(:zip, "Enter Your Zip Code:") %>
-<%= text_field_tag(:zip) %>
-<%= submit_tag("Enter Zip") %>
-<% end %> 
+<button type="button" class="pull-right"><%= link_to 'Log Out', destroy_user_session_path, method: 'delete' %></button>
+<div class='pull-right'>
+	
+	<%= form_tag("/legislators/", method: "get") do %>
+	<%= label_tag(:zip, "Enter Your Zip Code:") %>
+	<%= text_field_tag(:zip) %>
+	<%= submit_tag("Enter Zip") %>
+	<% end %>
+	</div> 
 
-<% else %>
-<button type="button" class="pull-right"><%= link_to 'Sign Up', new_user_registration_path %></button><button type="button" class="pull-right"><%= link_to 'Log In', new_user_session_path %></button>
-<% end %>
+	<% else %>
+	<button type="button" class="pull-right"><%= link_to 'Sign Up', new_user_registration_path %></button><button type="button" class="pull-right"><%= link_to 'Log In', new_user_session_path %></button>
+	<% end %>

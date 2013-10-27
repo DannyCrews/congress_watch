@@ -16,6 +16,8 @@ gem 'hashie'
 
 gem 'rash'
 
+gem "yaml_db", "~> 0.2.3"
+
 gem 'congress'
 
 gem 'json'

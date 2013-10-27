@@ -1,0 +1,15 @@
+
+<%#= @bill_bulk_data.each_pair { |key, value| hash[key] = value.to_a } %>
+
+<%# new_hash = @bill_bulk_data.results.inject({}) {|h, (key, value)| h[key] = value; h } %>
+
+<%# newer_hash = new_hash.inject({}) {|h, (key, value)| h[key] = value; h }%>
+
+<%# newest_hash = newer_hash.inject({}) {|h, (key, value)| h[key] = value; h } %>   
+<%#= newest_hash %>
+
+<% first = @bill_bulk_data.each{|k,v| @bill_bulk_data[k]=*v} %>
+
+<% second  = first.collect { |k, v| v } %>
+
+<%= second.flatten %>
