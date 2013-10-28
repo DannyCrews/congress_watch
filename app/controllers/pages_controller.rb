@@ -6,11 +6,11 @@ class PagesController < ApplicationController
 	end
 
 
-def create          
-	@page = Page.new(zipcode_params)          
-	if @page.save format.html { redirect_to @page, notice: 'Pages were successfully created.' }
-end    
-end
+	def create          
+		@page = Page.new(zipcode_params)          
+		if @page.save format.html { redirect_to @page, notice: 'Pages were successfully created.' }
+		end    
+	end
 
 
 

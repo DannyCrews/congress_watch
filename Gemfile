@@ -16,6 +16,8 @@ gem 'hashie'
 
 gem 'rash'
 
+gem 'nokogiri'
+
 gem 'httparty'
 
 gem "yaml_db", "~> 0.2.3"

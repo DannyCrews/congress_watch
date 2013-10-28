@@ -15,25 +15,25 @@
  @import "twitter/bootstrap";
 
  .jumbotron{
-    background-color:#1253a4;
-    color:white;
-}
-.navbar-wrapper {
+ 	background-color:#1253a4;
+ 	color:white;
+ }
+ .navbar-wrapper {
   background-color: #CC0000; /* fallback color, place your own */
 
 }
 
 /* title */
 .navbar-default .navbar-brand {
-    color: white;
+	color: white;
 }
 /* link */
 .navbar-default .navbar-nav > li > a {
-    color: white;
+	color: white;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-    color: #333;
+	color: #333;
 }
 
 

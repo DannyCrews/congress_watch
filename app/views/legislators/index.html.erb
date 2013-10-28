@@ -5,7 +5,7 @@
 <% @twitter = legislator[:twitter_id].to_s %>
 
 <div class="row-fluid">
-<div class="col-md-6" class="row-fluid">
+	<div class="col-md-6" class="row-fluid">
 		<%= image_tag "#{image}.jpg", :size => "200x250", :responsive => true %>
 		<h3 class="text-center"><%= "#{legislator[:title]} #{legislator[:first_name]} #{legislator[:last_name]}" %></h3>
 		<div style="overflow-y:scroll; height:400px;">
@@ -29,7 +29,7 @@
 
 
 <%# legislator.each do |key, value| %> 
-<p><%#= "#{key.to_s} #{value.to_s}" %></p> 
+<%#= "#{key.to_s} #{value.to_s}" %>
 <%# end %>
 
 
