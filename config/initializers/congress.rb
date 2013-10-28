@@ -1,0 +1,1 @@
+Page.key = ENV['NYTC_API_KEY']
