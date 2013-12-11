@@ -19,4 +19,21 @@
 <%#= xml_doc = Nokogiri::XML(@response) %>
 
 
-<%= xml_doc = Nokogiri::XML('@response') %>
+
+
+<%# xml_doc = Nokogiri::XML('@response') %>
+<%# unpack = @response.values_at('result_set') %>
+<%# unpacked = [] %>
+<%# further_unpacked = [] %>
+<%# n = @response.length %>
+
+<%# count=0 %>
+<%# while count <= n do %>
+<%# unpacked << @response.at(n) %>
+<%# count = count + 1 %>
+<%# end %>
+
+<%# further_unpacked << unpacked.fetch(0) %>
+
+<%=  @response %>
+
